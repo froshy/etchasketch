@@ -18,5 +18,5 @@ function createGrid(grid, width){
         grid.appendChild(rowDiv);
     }
 }
-let n = 2;
+let n = 40;
 createGrid(grid_div, n);
