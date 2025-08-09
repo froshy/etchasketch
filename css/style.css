@@ -3,9 +3,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
-#grid {
-    --cols: 4;
+.grid {
+    --cols: 16;
     display: flex;
     width: min(80vmin, 1000px);
     height: min(80vmin, 1000px);
@@ -21,7 +22,7 @@ body {
 
 .cell {
     display: flex;
-    flex: 0 0 calc(100% / var(--cols));
+    flex: 1 1 calc(100% / var(--cols));
     border: 1px solid black;
     aspect-ratio: 1;
     box-sizing: border-box;

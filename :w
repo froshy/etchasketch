@@ -1,6 +1,12 @@
 const body = document.querySelector("body");
-const grid_div = document.createElement("div");
+const grid_div = createElement("div");
+grid_div.classList.add("grid");
+const grid_div= document.querySelector('#grid');
 const sizeButton = document.createElement("button");
+
+sizeButton.addEventListener("click", inputNewSize);
+sizeButton.textContent = "Change Size";
+body.appendChild(sizeButton);
 
 function inputNewSize(){
     const n = prompt("Enter a new grid width:");
@@ -26,12 +32,5 @@ function createGrid(grid, width){
         grid.appendChild(rowDiv);
     }
 }
-
-grid_div.classList.add("grid");
-sizeButton.addEventListener("click", inputNewSize);
-sizeButton.textContent = "Change Size";
-body.appendChild(sizeButton);
-body.appendChild(grid_div);
-
 const initSize = 16;
 createGrid(grid_div, initSize);
