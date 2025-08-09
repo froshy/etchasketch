@@ -1,8 +1,22 @@
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#grid {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+}
 .row {
     display: flex;
-    flex-direction: row;
 }
 
 .cell {
-    border = 1px;
+    flex: 0 0 25%;
+    border: 1px solid black;
+    width: 5%;
+    aspect-ratio: 1;
+    box-sizing: border-box;
 }
