@@ -1,5 +1,9 @@
 const grid_div= document.querySelector('#grid');
 
+function changeColor(e){
+    e.target.style.backgroundColor = "black";
+}
+
 function createGrid(grid, width){
     grid_div.style.setProperty("--cols", width);
     for (let i=0; i<width; i++) {
@@ -8,11 +12,11 @@ function createGrid(grid, width){
         for (let j=0; j<width; j++){
             const newDiv = document.createElement("div");
             newDiv.classList.add("cell");
+            newDiv.addEventListener("mouseover", changeColor);
             rowDiv.appendChild(newDiv);
-            newDiv.textContent = `This is div ${i}. ${j}`;
         }
         grid.appendChild(rowDiv);
     }
 }
-let n = 100;
+let n = 2;
 createGrid(grid_div, n);
