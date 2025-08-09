@@ -10,7 +10,7 @@ function createGrid(grid, width){
             rowDiv.appendChild(newDiv);
             newDiv.textContent = `This is div ${i}. ${j}`;
         }
-        grid_div.appendChild(rowDiv);
+        grid.appendChild(rowDiv);
     }
 }
 
