@@ -1,6 +1,7 @@
 const grid_div= document.querySelector('#grid');
 
 function createGrid(grid, width){
+    grid_div.style.setProperty("--cols", width);
     for (let i=0; i<width; i++) {
         const rowDiv = document.createElement("div");
         rowDiv.classList.add("row")
@@ -13,5 +14,5 @@ function createGrid(grid, width){
         grid.appendChild(rowDiv);
     }
 }
-
-createGrid(grid_div, 5);
+let n = 100;
+createGrid(grid_div, n);
